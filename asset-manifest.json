@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Krassster/Mindbox-Todo/static/css/main.48b3d755.css",
+    "main.js": "/Krassster/Mindbox-Todo/static/js/main.857b83c2.js",
+    "index.html": "/Krassster/Mindbox-Todo/index.html",
+    "main.48b3d755.css.map": "/Krassster/Mindbox-Todo/static/css/main.48b3d755.css.map",
+    "main.857b83c2.js.map": "/Krassster/Mindbox-Todo/static/js/main.857b83c2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48b3d755.css",
+    "static/js/main.857b83c2.js"
+  ]
+}
