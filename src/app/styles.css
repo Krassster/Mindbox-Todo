@@ -1,0 +1,163 @@
+body {
+  background-color: #e8e8e8;
+  font-family: "Inter", sans-serif;
+}
+
+.wrapper {
+  max-width: 500px;
+  margin: 10px auto;
+}
+
+.header {
+  font-size: 100px;
+  font-weight: 100;
+  text-align: center;
+  color: rgba(175, 47, 47, 0.15);
+}
+
+.container {
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-task {
+  display: flex;
+}
+
+.add-task button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 13px;
+}
+
+.add-task input {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  color: #4d4d4d;
+}
+
+.add-task input::placeholder {
+  font-family: "Inter", sans-serif;
+  color: #d1d1d1;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.task-list {
+  margin: 0;
+  padding-left: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  border-bottom: 1px solid #ededed;
+  font-size: 18px;
+  gap: 10;
+}
+
+.task-item span {
+  padding-left: 20px;
+}
+
+.task-item:first-child {
+  border-top: 2px solid #ededed;
+}
+
+.checkbox-wrapper {
+  position: relative;
+}
+
+.checkbox-wrapper label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  display: block;
+  cursor: pointer;
+}
+
+.checkbox-wrapper label:after {
+  border: 2px solid #66bb6a;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 8px;
+  opacity: 0;
+  position: absolute;
+  top: 9px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.checkbox-wrapper input {
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+}
+
+.checkbox-wrapper input:checked + label {
+  background-color: #ffffff;
+  border-color: #66bb6a;
+}
+
+.checkbox-wrapper input:checked + label:after {
+  opacity: 1;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #d1d1d1;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.footer button {
+  padding: 3px 6px;
+  border: 1px solid transparent;
+  background-color: #fff;
+  cursor: pointer;
+  color: rgb(101, 101, 101);
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.footer button:hover {
+  border: 1px solid #c8c8c8;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.items-left {
+  color: rgb(101, 101, 101);
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filters button.active {
+  border: 1px solid #a0a0a0;
+  border-radius: 2px;
+}
+
+.clear {
+  cursor: pointer;
+  padding: 3px 6px;
+}
