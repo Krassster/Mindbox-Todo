@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Krassster/Mindbox-Todo/static/css/main.48b3d755.css",
-    "main.js": "/Krassster/Mindbox-Todo/static/js/main.857b83c2.js",
-    "index.html": "/Krassster/Mindbox-Todo/index.html",
-    "main.48b3d755.css.map": "/Krassster/Mindbox-Todo/static/css/main.48b3d755.css.map",
-    "main.857b83c2.js.map": "/Krassster/Mindbox-Todo/static/js/main.857b83c2.js.map"
+    "main.css": "/Mindbox-Todo/static/css/main.48b3d755.css",
+    "main.js": "/Mindbox-Todo/static/js/main.857b83c2.js",
+    "index.html": "/Mindbox-Todo/index.html",
+    "main.48b3d755.css.map": "/Mindbox-Todo/static/css/main.48b3d755.css.map",
+    "main.857b83c2.js.map": "/Mindbox-Todo/static/js/main.857b83c2.js.map"
   },
   "entrypoints": [
     "static/css/main.48b3d755.css",
