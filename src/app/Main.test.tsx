@@ -1,5 +1,4 @@
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import "@testing-library/jest-dom";
+import { render, screen, fireEvent } from "@testing-library/react";
 import Main from "./Main";
 
 describe("Main Component", () => {
@@ -18,8 +17,8 @@ describe("Main Component", () => {
 
     const tasks = screen.getAllByRole("listitem");
     expect(tasks.length).toBe(2);
-    expect(screen.getByText("Task 1")).toBeInTheDocument();
-    expect(screen.getByText("Task 2")).toBeInTheDocument();
+    expect(screen.getByText("Task 1")).toBeTruthy();
+    expect(screen.getByText("Task 2")).toBeTruthy();
   });
 
   test("Сохранение тасок в localStorage при добавлении новой", () => {
@@ -34,7 +33,7 @@ describe("Main Component", () => {
     expect(tasks[0].title).toBe("New Task");
   });
 
-  test("Обновление тасок в localStorage при изменении статуса", async () => {
+  test("Обновление тасок в localStorage при изменении статуса", () => {
     const mockTasks = [{ id: 1, title: "Task 1", completed: false }];
     localStorage.setItem("tasks", JSON.stringify(mockTasks));
 
@@ -43,14 +42,9 @@ describe("Main Component", () => {
     const checkbox = screen.getByRole("checkbox");
     fireEvent.click(checkbox);
 
-    await waitFor(
-      () => {
-        const updatedTasks = JSON.parse(localStorage.getItem("tasks") || "[]");
-        console.log("Updated tasks in localStorage:", updatedTasks);
-        expect(updatedTasks[0].completed).toBe(true);
-      },
-      { timeout: 1000 }
-    );
+    const updatedTasks = JSON.parse(localStorage.getItem("tasks") || "[]");
+    console.log("Updated tasks in localStorage:", updatedTasks);
+    expect(updatedTasks[0].completed).toBe(true);
   });
 
   test("Обновлении тасок в localStorage при удалении", () => {
